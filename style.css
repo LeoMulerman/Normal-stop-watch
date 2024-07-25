@@ -1,0 +1,120 @@
+body {
+  background-color: rgb(49, 32, 97);
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 35px;
+}
+
+.text {
+  text-align: center;
+  font-size: 35px;
+}
+
+.btn {
+  width: 300px;
+  height: 300px;
+  font-size: 50px;
+  border-radius: 50%;
+  border: none;
+  padding: 50px;
+  margin: 40px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(84, 18, 177, 1) 0%,
+    rgba(150, 50, 250, 1) 100%
+  );
+  transition: 0.5s ease;
+}
+
+.btn-stop {
+  position: absolute;
+  top: 25%;
+  right: 30%;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  padding: 50px;
+  margin: 40px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgb(39, 5, 87) 0%,
+    rgb(169, 83, 255) 100%
+  );
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-stop:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(56, 17, 111) 0%,
+    rgb(123, 3, 244) 100%
+  );
+  font-size: 25px;
+}
+.btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(56, 17, 111) 0%,
+    rgb(123, 3, 244) 100%
+  );
+  font-size: 70px;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-input {
+  width: 500px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.timer-input:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  input {
+    max-width: 200px;
+    padding: 8px;
+    font-size: 15px;
+  }
+  input::placeholder {
+    font-size: 14px;
+  }
+  .btn-stop {
+    width: 50px;
+    height: 50px;
+    top: 8%;
+    left: 70%;
+    font-size: 15px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title" id="title">Нормальный Таймер</h1>
+      <button class="btn" id="btn"></button>
+      <button class="btn-stop hide" id="btn-stop">Stop</button>
+      <input
+        class="timer-input"
+        id="timer-input"
+        type="text"
+        placeholder="Введите нужное кол-во секунд"
+      />
+
+      <audio id="tick-sound" src="./odinochnyiy-zvuk-tikanya.wav"></audio>
+      <audio id="mouse-sound" src="dvoynoy-schelchok-myishi.wav"></audio>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
