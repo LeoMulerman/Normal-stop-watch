@@ -2,6 +2,7 @@ const btnStart = document.getElementById("btn");
 const btnStop = document.getElementById("btn-stop");
 const tickSound = document.getElementById("tick-sound");
 const mouseSound = document.getElementById("mouse-sound");
+const pigSound = document.getElementById("pig-sound");
 const timerInput = document.getElementById("timer-input");
 let title = document.getElementById("title");
 
@@ -42,6 +43,7 @@ btnStart.addEventListener("click", () => {
       btnStart.disabled = false;
       btnStart.innerHTML = "start";
       btnStop.classList.add("hide");
+      pigSound.play();
     }
     timerInput.value = "";
     btnStop.addEventListener("click", () => {
