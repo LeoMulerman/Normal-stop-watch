@@ -1,4 +1,4 @@
-const btn = document.getElementById("btn");
+const btnStart = document.getElementById("btn");
 const btnStop = document.getElementById("btn-stop");
 const tickSound = document.getElementById("tick-sound");
 const mouseSound = document.getElementById("mouse-sound");
@@ -9,7 +9,7 @@ let count;
 let timer;
 
 function updateButtonState() {
-  btn.disabled = timerInput.value.trim() === "";
+  btnStart.disabled = timerInput.value.trim() === "";
 }
 
 function stopTimer() {
@@ -20,15 +20,15 @@ updateButtonState();
 
 timerInput.addEventListener("input", updateButtonState);
 
-btn.addEventListener("click", () => {
+btnStart.addEventListener("click", () => {
   btnStop.classList.remove("hide");
   count = parseInt(timerInput.value, 10);
   title.innerHTML = `Вы выбрали ${count} секунд`;
-  btn.disabled = true;
+  btnStart.disabled = true;
   timer = setInterval(() => {
     if (count > 0) {
       count--;
-      btn.innerHTML = count;
+      btnStart.innerHTML = count;
       tickSound.currentTime = 0;
       tickSound.play();
 
@@ -39,21 +39,21 @@ btn.addEventListener("click", () => {
       }
     } else {
       clearInterval(timer);
-      btn.disabled = false;
-      btn.innerHTML = "start";
+      btnStart.disabled = false;
+      btnStart.innerHTML = "start";
       btnStop.classList.add("hide");
     }
     timerInput.value = "";
     btnStop.addEventListener("click", () => {
       stopTimer();
-      btn.disabled = false;
-      btn.innerHTML = "start";
+      btnStart.disabled = false;
+      btnStart.innerHTML = "start";
       btnStop.classList.add("hide");
     });
   }, 1000);
 });
 
-btn.innerHTML = "start";
+btnStart.innerHTML = "start";
 
 if (window.innerWidth <= 600) {
   timerInput.placeholder = "Введите секунды";
